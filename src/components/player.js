@@ -30,6 +30,7 @@ export default class Player extends React.Component{
     }
     componentDidMount(){
 
+        const liveChannel="tabvn";
         const video =this.player;
 
         video.addEventListener('contextmenu',(e)=>{
@@ -38,10 +39,10 @@ export default class Player extends React.Component{
         })
 
 
-        
+
         if(Hls.isSupported() && this.player) {
           var hls = new Hls();
-          const streamUrl='https://video-dev.github.io/streams/x36xhzz/x36xhzz.m3u8';
+          const streamUrl=`http://80.211.155.220:8080/live/${liveChannel}/index.m3u8`;
           hls.loadSource(streamUrl);
           hls.attachMedia(video);
           hls.on(Hls.Events.MANIFEST_PARSED,function() {
