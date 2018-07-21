@@ -30,7 +30,7 @@ export default class Player extends React.Component{
     }
     componentDidMount(){
 
-        const liveChannel="tabvn";
+        const liveChannel="phongvx";
         const video =this.player;
 
         video.addEventListener('contextmenu',(e)=>{
