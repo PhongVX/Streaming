@@ -37,6 +37,8 @@ export default class Player extends React.Component{
             return false;
         })
 
+
+        
         if(Hls.isSupported() && this.player) {
           var hls = new Hls();
           const streamUrl='https://video-dev.github.io/streams/x36xhzz/x36xhzz.m3u8';
